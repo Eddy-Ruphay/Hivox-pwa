@@ -3,52 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#111827" />
-    <link rel="manifest" href="manifest.json" />
+    <title>Hivox – Cresce Ouvindo</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
-    <title>Hivox – Audiolivros</title>
-<link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="manifest" href="manifest.json" />
   </head>
+
   <body>
-    <header>
+    <header class="topo">
+      <img src="assets/logo.png" alt="Hivox Logo" class="logo" />
       <h1>Hivox</h1>
-      <p>Cresce ouvindo.</p>
+      <p class="slogan">Cresce ouvindo</p>
     </header>
+
     <main>
-      <section>
-        <h2>Audiolivros para todos</h2>
-        <p>Explore conteúdos em áudio para aprender, crescer e se inspirar.</p>
-        <button onclick="window.location.href='https://wa.me/'">Entrar com WhatsApp</button>
+      <section class="intro">
+        <h2>Descubra o poder dos audiolivros</h2>
+        <p>Ficção, finanças, espiritualidade e mais… tudo em áudio.</p>
+      </section>
+
+      <section class="audio-sample">
+        <h3>Ouça um trecho:</h3>
+        <audio controls>
+          <source src="assets/sample.mp3" type="audio/mpeg" />
+          Seu navegador não suporta áudio.
+        </audio>
+      </section>
+
+      <section class="links">
+        <a href="catalogo.html" class="botao">Ver Catálogo</a>
+        <a href="login.html" class="botao">Login via WhatsApp</a>
       </section>
     </main>
-    <footer>
-      <p>&copy; 2025 Hivox</p>
-    </footer>
-
-    <script src="app.js"></script>
-  <button id="install-button" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 20px; background-color: #0e0e0e; color: white; border: none; border-radius: 10px; font-size: 16px; display: none;">
-  Instalar Hivox
-</button>
-
-<script>
-  let deferredPrompt;
-  const installBtn = document.getElementById("install-button");
-
-  window.addEventListener("beforeinstallprompt", (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    installBtn.style.display = "block";
-  });
-
-  installBtn.addEventListener("click", () => {
-    installBtn.style.display = "none";
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then((choiceResult) => {
-      deferredPrompt = null;
-    });
-  });
-</script>Sim 
   </body>
 </html>
-<a href="catalogo.html">Ver Catálogo</a> |
-<a href="login.html">Login via WhatsApp</a>

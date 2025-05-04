@@ -26,5 +26,27 @@
     </footer>
 
     <script src="app.js"></script>
+  <button id="install-button" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 20px; background-color: #0e0e0e; color: white; border: none; border-radius: 10px; font-size: 16px; display: none;">
+  Instalar Hivox
+</button>
+
+<script>
+  let deferredPrompt;
+  const installBtn = document.getElementById("install-button");
+
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.style.display = "block";
+  });
+
+  installBtn.addEventListener("click", () => {
+    installBtn.style.display = "none";
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      deferredPrompt = null;
+    });
+  });
+</script>Sim 
   </body>
 </html>

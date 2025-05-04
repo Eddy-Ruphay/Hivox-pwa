@@ -1,39 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hivox – Cresce Ouvindo</title>
-    <link rel="icon" href="favicon.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.png" type="image/png" />
     <link rel="manifest" href="manifest.json" />
   </head>
-
   <body>
-    <header class="topo">
-      <img src="assets/logo.png" alt="Hivox Logo" class="logo" />
-      <h1>Hivox</h1>
-      <p class="slogan">Cresce ouvindo</p>
-    </header>
+    <div class="hero">
+      <div class="overlay">
+        <img src="assets/logo.png" alt="Hivox Logo" class="logo" />
+        <h1>Hivox</h1>
+        <p class="slogan">Cresce ouvindo</p>
 
-    <main>
-      <section class="intro">
-        <h2>Descubra o poder dos audiolivros</h2>
-        <p>Ficção, finanças, espiritualidade e mais… tudo em áudio.</p>
-      </section>
-
-      <section class="audio-sample">
-        <h3>Ouça um trecho:</h3>
-        <audio controls>
-          <source src="assets/sample.mp3" type="audio/mpeg" />
-          Seu navegador não suporta áudio.
-        </audio>
-      </section>
-
-      <section class="links">
-        <a href="catalogo.html" class="botao">Ver Catálogo</a>
-        <a href="login.html" class="botao">Login via WhatsApp</a>
-      </section>
-    </main>
+        <div class="botoes">
+          <a href="catalogo.html" class="botao">Ver Catálogo</a>
+          <a href="login.html" class="botao">Login via WhatsApp</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
